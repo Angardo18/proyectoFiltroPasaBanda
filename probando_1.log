@@ -1,0 +1,21 @@
+Circuit: * D:\programacion\Python\proyectoFiltroPasaBanda\probando.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Mar 21 22:52:06 2021
+Total elapsed time: 1.524 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1966513
+traniter = 1966510
+tranpoints = 983256
+accept = 977887
+rejected = 5369
+matrix size = 3
+fillins = 0
+solver = Normal
+Matrix Compiler1: 50 bytes object code size  0.0/0.0/[0.0]
+Matrix Compiler2:      15 opcodes  0.0/[0.0]/0.0
+
