@@ -1,8 +1,0 @@
-* D:\programacion\Python\proyectoFiltroPasaBanda\probando.asc
-R1 Vout Vin 10k
-C1 Vout 0 1µ
-V1 Vin 0 wavefile="EG 2.wav"
-.tran 5
-.wave salida.wav 16 44.1k V(vout)
-.backanno
-.end

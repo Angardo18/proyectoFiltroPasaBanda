@@ -1,0 +1,199 @@
+* D:\programacion\Python\proyectoFiltroPasaBanda\Ecualizador.asc
+V1 VCC 0 15
+V2 VEE 0 -15
+R1 -32 Vin1 100k
+R4 Vsuma -32 100k
+C1 N001 Vsuma 100n
+C2 +1 N001 100n
+R5 +1 0 680k
+R6 -1 N001 56k
+R7 N005 -1 27k
+R8 +2 N005 27k
+C3 +2 0 100n
+C4 -2 N005 200n
+R9 -1 N001 560k
+R10 +1 0 120k
+R11 +2 N005 430k
+R12 N005 -1 430k
+C5 N008 Vsuma 100n
+C6 +4 N008 100n
+R13 +4 0 560k
+R14 -4 N008 430k
+R15 N012 -4 15k
+R16 +5 N012 15k
+C7 +5 0 100n
+C8 -5 N012 200n
+R17 -4 N008 27k
+R18 +4 0 56k
+R19 N012 -4 82k
+R20 +5 N012 82k
+C9 N018 Vsuma 100n
+C10 +7 N018 100n
+R21 +7 0 430k
+R22 -7 N018 18k
+R23 N021 -7 430k
+R24 +8 N021 430k
+C11 +8 0 10n
+C12 -8 N021 20n
+R25 -7 N018 43k
+R26 +7 0 27k
+R27 N021 -7 75k
+R28 +8 N021 75k
+C13 N002 Vsuma 10n
+C14 +10 N002 10n
+R29 +10 0 430k
+R30 -10 N002 430k
+R31 N006 -10 910k
+R32 +11 N006 910k
+C15 +11 0 10n
+C16 -11 N006 20n
+R33 -10 N002 75k
+R34 +10 0 180k
+R35 N006 -10 33k
+R36 +11 N006 33k
+C17 N009 Vsuma 10n
+C18 +13 N009 10n
+R37 +13 0 430k
+R38 -13 N009 36k
+R39 N013 -13 39k
+R40 +14 N013 39k
+C19 +14 0 10n
+C20 -14 N013 20n
+R41 -13 N009 270k
+R42 +13 0 75k
+R43 N013 -13 27k
+R44 +14 N013 27k
+C21 N019 Vsuma 10n
+C22 +16 N019 10n
+R45 +16 0 270k
+R46 -16 N019 18k
+R47 N024 -16 270k
+R48 +17 N024 270k
+C23 +17 0 10n
+C24 -17 N024 20n
+R49 -16 N019 150k
+R50 +16 0 36k
+R51 N024 -16 8.2k
+R52 +17 N024 8.2k
+C25 N003 Vsuma 10n
+C26 +19 N003 10n
+R53 +19 0 150k
+R54 -19 N003 8.2k
+R55 N007 -19 510k
+R56 +20 N007 510k
+C27 +20 0 1n
+C28 -20 N007 2n
+R57 -19 N003 270k
+R58 +19 0 18k
+R59 N007 -19 43k
+R60 +20 N007 43k
+C29 N010 Vsuma 1n
+C30 +22 N010 1n
+R61 +22 0 390k
+R62 -22 N010 43k
+R63 N014 -22 20k
+R64 +23 N014 20k
+C31 +23 0 1n
+C32 -23 N014 2n
+R65 -22 N010 510k
+R66 +22 0 100k
+C33 N022 Vsuma 1n
+C34 +25 N022 1n
+R67 +25 0 43k
+R68 -25 N022 20k
+R69 N023 -25 10k
+R70 +26 N023 10k
+C35 +26 0 1n
+C36 -26 N023 2n
+R71 +25 0 530k
+C37 N025 Vsuma 1n
+C38 +28 N025 1n
+R72 +28 0 20k
+R73 -28 N025 10k
+R74 N026 -28 5k
+R75 +29 N026 5k
+C39 +29 0 1n
+C40 -29 N026 2n
+R76 Vbanda1 -3 100k
+R77 -3 -2 10k
+R78 Vbanda2 -6 100k
+R79 -6 -5 10k
+R80 Vbanda3 -9 50k
+R81 -9 -8 10k
+R82 N004 -12 1k
+R83 -12 -11 10k
+R84 N011 -15 1k
+R85 -15 -14 10k
+R86 Vbanda6 -18 1k
+R87 -18 -17 10k
+R89 -21 -20 10k
+R90 Vbanda8 -24 1k
+R91 -24 -23 10k
+R92 Vbanda9 -27 1k
+R93 -27 -26 10k
+R94 Vbanda10 -30 1k
+R95 -30 -29 10k
+R2 -32 N017 100k
+B1 N017 0 V=V(Vin2)
+D1 N016 0 MyDiode
+D2 0 N016 MyDiode
+C41 N015 Vin2 1µ
+R3 N016 N015 10k
+C42 Vin2d N016 1µ
+B2 -1 0 V= 1Meg*(V(+1)-V(-1))
+B3 -2 0 V= 1Meg*(V(+2)-V(-2))
+B4 Vbanda1 0 V= 1Meg*(V(0)-V(-3))
+B5 -4 0 V= 1Meg*(V(+4)-V(-4))
+B6 -5 0 V= 1Meg*(V(+5)-V(-5))
+B7 Vbanda2 0 V= 1Meg*(V(0)-V(-6))
+B8 -7 0 V= 1Meg*(V(+7)-V(-7))
+B9 -8 0 V= 1Meg*(V(+8)-V(-8))
+B10 Vbanda3 0 V= 1Meg*(V(0)-V(-9))
+B11 -10 0 V= 1Meg*(V(+10)-V(-10))
+B12 -11 0 V= 1Meg*(V(+11)-V(-11))
+B13 N004 0 V= 1Meg*(V(0)-V(-12))
+B14 -13 0 V= 1Meg*(V(+13)-V(-13))
+B15 -14 0 V= 1Meg*(V(+14)-V(-14))
+B16 N011 0 V= 1Meg*(V(0)-V(-15))
+B17 -16 0 V= 1Meg*(V(+16)-V(-16))
+B18 -17 0 V= 1Meg*(V(+17)-V(-17))
+B19 Vbanda6 0 V= 1Meg*(V(0)-V(-18))
+B20 -19 0 V= 1Meg*(V(+19)-V(-19))
+B21 -20 0 V= 1Meg*(V(+20)-V(-20))
+B22 Vbanda7 0 V= 1Meg*(V(0)-V(-21))
+B23 -22 0 V= 1Meg*(V(+22)-V(-22))
+B24 -23 0 V= 1Meg*(V(+23)-V(-23))
+B25 Vbanda8 0 V= 1Meg*(V(0)-V(-24))
+B26 -25 0 V= 1Meg*(V(+25)-V(-25))
+B27 -26 0 V= 1Meg*(V(+26)-V(-26))
+B28 Vbanda9 0 V= 1Meg*(V(0)-V(-27))
+B29 -28 0 V= 1Meg*(V(+28)-V(-28))
+B30 -29 0 V= 1Meg*(V(+29)-V(-29))
+B31 Vbanda10 0 V= 1Meg*(V(0)-V(-30))
+R96 -31 Vbanda1 100k
+R97 -31 Vbanda2 100k
+R98 -31 Vbanda3 100k
+R99 -31 -12 100k
+R100 -31 -15 100k
+R101 -31 Vbanda6 100k
+R102 -31 Vbanda7 100k
+R103 -31 Vbanda8 100k
+R104 -31 Vbanda9 100k
+R105 -31 Vbanda10 100k
+B32 Vout 0 V= 1Meg*(V(0)-V(-31))
+R106 Vout -31 100k
+B33 Vsuma 0 V= 1Meg*(V(0)-V(-32))
+R88 Vbanda7 -21 1k
+V3 Vin1 0 wavefile=Pistas/Bass.wav
+V4 Vin2 0 wavefile="Pistas/EG 2.wav"
+V5 N020 0 wavefile="Pistas/Keys 1.wav"
+R107 -32 N020 100k
+.model D D
+.lib C:\Users\AngelOrellana\Documents\LTspiceXVII\lib\cmp\standard.dio
+.tran 10
+.wave salida.wav 16 44.1k V(Vout)
+;ac dec 100 1 100k
+.model MyDiode D(Ron=1m Roff=100Meg Vfwd=0.2)
+.wave salida.wav 16 44.1k V(vout)
+.backanno
+.end
