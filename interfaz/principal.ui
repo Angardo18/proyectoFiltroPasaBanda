@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>681</width>
-    <height>557</height>
+    <width>743</width>
+    <height>565</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>70</y>
+      <y>80</y>
       <width>31</width>
       <height>16</height>
      </rect>
@@ -40,26 +40,131 @@
      <string>-20 dB</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnMezclar">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>510</y>
-      <width>75</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Mezclar</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>70</y>
-      <width>581</width>
-      <height>421</height>
+      <x>120</x>
+      <y>10</y>
+      <width>501</width>
+      <height>53</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>Pista 1:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cmbTrack1">
+         <property name="currentText">
+          <string>Elige una pista:</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Elige una pista:</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>Pista 2:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="chckDistortion">
+           <property name="text">
+            <string>Distorsión</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cmbTrack2">
+         <property name="currentText">
+          <string>Elige una pista:</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Elige una pista:</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Pista 3:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cmbTrack3">
+         <item>
+          <property name="text">
+           <string>Elige una pista:</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>500</y>
+      <width>337</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_16">
+       <property name="text">
+        <string>Nombre de la mezcla:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnMezclar">
+       <property name="text">
+        <string>Mezclar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>72</x>
+      <y>72</y>
+      <width>571</width>
+      <height>411</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -94,42 +199,6 @@
         <widget class="QLabel" name="label">
          <property name="text">
           <string>32 Hz</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <widget class="QSlider" name="Slider5">
-         <property name="minimum">
-          <number>-20</number>
-         </property>
-         <property name="maximum">
-          <number>20</number>
-         </property>
-         <property name="singleStep">
-          <number>1</number>
-         </property>
-         <property name="pageStep">
-          <number>1</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="tickPosition">
-          <enum>QSlider::TicksBothSides</enum>
-         </property>
-         <property name="tickInterval">
-          <number>1</number>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>500 Hz</string>
          </property>
         </widget>
        </item>
@@ -238,6 +307,42 @@
         <widget class="QLabel" name="label_4">
          <property name="text">
           <string>250 Hz</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QSlider" name="Slider5">
+         <property name="minimum">
+          <number>-20</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="pageStep">
+          <number>1</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::TicksBothSides</enum>
+         </property>
+         <property name="tickInterval">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>500 Hz</string>
          </property>
         </widget>
        </item>
@@ -425,92 +530,43 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>10</y>
-      <width>501</width>
-      <height>53</height>
+      <x>650</x>
+      <y>170</y>
+      <width>77</width>
+      <height>116</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <layout class="QVBoxLayout" name="verticalLayout_14">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_12">
-       <item>
-        <widget class="QLabel" name="label_13">
-         <property name="text">
-          <string>Pista 1:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="cmbTrack1">
-         <property name="currentText">
-          <string>Elige una pista:</string>
-         </property>
-         <item>
-          <property name="text">
-           <string>Elige una pista:</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="btnJazz">
+       <property name="text">
+        <string>Jazz</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_11">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_14">
-           <property name="text">
-            <string>Pista 2:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="chckDistortion">
-           <property name="text">
-            <string>Distorsión</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QComboBox" name="cmbTrack2">
-         <property name="currentText">
-          <string>Elige una pista:</string>
-         </property>
-         <item>
-          <property name="text">
-           <string>Elige una pista:</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="btnBlues">
+       <property name="text">
+        <string>Blues</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_13">
-       <item>
-        <widget class="QLabel" name="label_15">
-         <property name="text">
-          <string>Pista 3:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="cmbTrack3">
-         <item>
-          <property name="text">
-           <string>Elige una pista:</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="btnMetal">
+       <property name="text">
+        <string>Metal</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnRock">
+       <property name="text">
+        <string>Rock</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>

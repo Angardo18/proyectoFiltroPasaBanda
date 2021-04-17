@@ -134,12 +134,10 @@ R93 -27 -26 10k
 R94 Vbanda10 -30 1k
 R95 -30 -29 10k
 R2 -32 N017 100k
-B1 N017 0 V=V(Vin2)
-D1 N016 0 MyDiode
-D2 0 N016 MyDiode
-C41 N015 Vin2 1µ
-R3 N016 N015 10k
-C42 Vin2d N016 1µ
+D1 Vin2d 0 MyDiode
+D2 0 Vin2d MyDiode
+C41 N016 N015 1µ
+R3 Vin2d N016 10k
 B2 -1 0 V= 1Meg*(V(+1)-V(-1))
 B3 -2 0 V= 1Meg*(V(+2)-V(-2))
 B4 Vbanda1 0 V= 1Meg*(V(0)-V(-3))
@@ -184,15 +182,17 @@ B32 Vout 0 V= 1Meg*(V(0)-V(-31))
 R106 Vout -31 100k
 B33 Vsuma 0 V= 1Meg*(V(0)-V(-32))
 R88 Vbanda7 -21 1k
-V3 Vin1 0 wavefile= Pistas/Bass.wav
-V4 Vin2 0 wavefile = "Pistas/EG 2.wav"
-V5 N020 0 wavefile = "Pistas/Keys 1.wav"
+V3 Vin1 0 0
+V4 Vin2 0 wavefile = "Pistas/AcousticGtrMic1.wav"
+V5 N020 0 0
 R107 -32 N020 100k
+B34 N015 0 V= 1Meg*(V(0)-V(-33))
+R108 -33 Vin2 10k
+R109 N015 -33 100k
+B1 N017 0 V={1-distor}*V(Vin2)+{distor}*V(Vin2d)
 .model D D
 .lib C:\Users\AngelOrellana\Documents\LTspiceXVII\lib\cmp\standard.dio
-.tran 0 10 0 0.01
-.wave salida.wav 16 44.1k V(Vout)
-;ac dec 100 1 100k
-.model MyDiode D(Ron=1m Roff=100Meg Vfwd=0.2)
+.model MyDiode D(Ron=1m Roff=100Meg Vfwd=0.3)
+.tran 12
 .backanno
 .end

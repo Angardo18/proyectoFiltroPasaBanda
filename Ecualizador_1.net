@@ -114,32 +114,30 @@ R74 N026 -28 5k
 R75 +29 N026 5k
 C39 +29 0 1n
 C40 -29 N026 2n
-R76 Vbanda1 -3 100k
+R76 Vbanda1 -3 10000.0
 R77 -3 -2 10k
-R78 Vbanda2 -6 100k
+R78 Vbanda2 -6 10000.0
 R79 -6 -5 10k
-R80 Vbanda3 -9 50k
+R80 Vbanda3 -9 10000.0
 R81 -9 -8 10k
-R82 N004 -12 1k
+R82 N004 -12 10000.0
 R83 -12 -11 10k
-R84 N011 -15 1k
+R84 N011 -15 10000.0
 R85 -15 -14 10k
-R86 Vbanda6 -18 1k
+R86 Vbanda6 -18 10000.0
 R87 -18 -17 10k
 R89 -21 -20 10k
-R90 Vbanda8 -24 1k
+R90 Vbanda8 -24 10000.0
 R91 -24 -23 10k
-R92 Vbanda9 -27 1k
+R92 Vbanda9 -27 10000.0
 R93 -27 -26 10k
-R94 Vbanda10 -30 1k
+R94 Vbanda10 -30 10000.0
 R95 -30 -29 10k
 R2 -32 N017 100k
-B1 N017 0 V=V(Vin2)
-D1 N016 0 MyDiode
-D2 0 N016 MyDiode
-C41 N015 Vin2 1µ
-R3 N016 N015 10k
-C42 Vin2d N016 1µ
+D1 Vin2d 0 MyDiode
+D2 0 Vin2d MyDiode
+C41 N016 N015 1µ
+R3 Vin2d N016 10k
 B2 -1 0 V= 1Meg*(V(+1)-V(-1))
 B3 -2 0 V= 1Meg*(V(+2)-V(-2))
 B4 Vbanda1 0 V= 1Meg*(V(0)-V(-3))
@@ -183,17 +181,20 @@ R105 -31 Vbanda10 100k
 B32 Vout 0 V= 1Meg*(V(0)-V(-31))
 R106 Vout -31 100k
 B33 Vsuma 0 V= 1Meg*(V(0)-V(-32))
-R88 Vbanda7 -21 1k
-V3 Vin1 0 wavefile=Pistas/Bass.wav
+R88 Vbanda7 -21 10000.0
+V3 Vin1 0 wavefile= "Pistas/Bass.wav"
 V4 Vin2 0 wavefile="Pistas/EG 2.wav"
-V5 N020 0 wavefile="Pistas/Keys 1.wav"
+V5 N020 0 wavefile=  "Pistas/Keys 1.wav"
 R107 -32 N020 100k
+B34 N015 0 V= 1Meg*(V(0)-V(-33))
+R108 -33 Vin2 10k
+R109 N015 -33 100k
+B1 N017 0 V={1-distor}*V(Vin2)+{distor}*V(Vin2d)
 .model D D
 .lib C:\Users\AngelOrellana\Documents\LTspiceXVII\lib\cmp\standard.dio
-.tran 10
-.wave salida.wav 16 44.1k V(Vout)
-;ac dec 100 1 100k
-.model MyDiode D(Ron=1m Roff=100Meg Vfwd=0.2)
-.wave salida.wav 16 44.1k V(vout)
+.model MyDiode D(Ron=1m Roff=100Meg Vfwd=0.3)
+.tran 12
+.PARAM distor=0  ; Batch instruction
+.wave trespistas.wav 16 44.1k V(vout)
 .backanno
 .end
